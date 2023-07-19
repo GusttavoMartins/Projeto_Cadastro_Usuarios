@@ -13,7 +13,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #0c0ce94d; 
+    background: #fff; 
 }
 
 .container {
@@ -21,7 +21,6 @@ body {
     height: 88vh;
     display: flex;
     box-shadow: 5px 5px 10px rgba(rgba, 0, 0, 0, .212);
-    flex-direction: row-reverse;
 }
 
 .form-img {
@@ -65,7 +64,7 @@ body {
     display: block;
     width: 5rem;
     height: 0.3rem;
-    background-color: #6c63ff;
+    background-color: #61ba9f;
     margin: 0 auto;
     position: absolute;
     border-radius: 10px;
@@ -78,13 +77,13 @@ body {
 
 .list-button button{
     border: none;
-    background-color: #6c63ff;
+    background-color: #009878;
     padding: 0.4rem 1rem;
     border-radius: 5px;
     cursor: pointer;
 }
 .list-button button:hover{
-    background-color: #6c63fff0;
+    background-color: #61ba9f;
 }
 
 .list-button button a {
@@ -119,7 +118,7 @@ body {
 }
 
 .input-box input:focus-visible{
-    outline: 1px solid #6c63ff;
+    outline: 1px solid #009878;
 }
 
 .input-date {
@@ -163,14 +162,14 @@ body {
     width: 100%;
     margin-top: 2.5rem;
     border: none;
-    background-color: #6c63ff;
+    background-color: #009878;
     padding: 0.62rem;
     border-radius: 5px;
     cursor: pointer;
 }
 
 .cadastrar-button button:hover{
-    background-color: #6c63fff1;
+    background-color: #3fa98c;
 }
 
 .cadastrar-button button a{

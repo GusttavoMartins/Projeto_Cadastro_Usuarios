@@ -10,18 +10,15 @@
 </head>
 <body>
     <div class="container">
-        <div class="form-img">
-            <img src="{% static 'img/pessoas.svg' %}">
-        </div>
         <div class="form">
-            <form action="#"class>
-                
+            <form action="{% url 'lista_usuarios' %}" method="post">
+                {% csrf_token %}
                 <div class="form-header">
                     <div class="title">
                         <h1>Cadastro</h1>
                     </div>
                     <div class="list-button">
-                        <button><a href="#"> Lista de Usuários</a></button>
+                        <button><a href="{% url 'lista_usuarios' %}"> Lista de Usuários</a></button method="get">
                     </div>
                 </div>
 
@@ -38,12 +35,12 @@
 
                     <div class="input-box">
                         <label for="number">CPF</label>
-                        <input type="text" id="CPF" name="number" autocomplete="off" placeholder="Digite seu CPF" required>
+                        <input type="text" id="CPF" name="cpf" autocomplete="off" placeholder="Digite seu CPF" required>
                     </div>
 
                     <div class="input-box">
                         <label for="date">Data nascimento</label>
-                        <input type="date" id="date" name="date" required class="input-date">
+                        <input type="date" id="date" name="data" required class="input-date">
                     </div>
 
                     <div class="input-box">
@@ -53,7 +50,7 @@
 
                     <div class="input-box">
                         <label for="number">Telefone</label>
-                        <input type="tel" id="number" name="number" autocomplete="off" placeholder="(xx) xxxx - xxxx" required>
+                        <input type="tel" id="number" name="telefone" autocomplete="off" placeholder="(xx) xxxx - xxxx" required>
                     </div>
                 </div>
                 <div class="gender-inputs">
@@ -63,30 +60,33 @@
 
                     <div class="gender-group">
                         <div class="gender-input">
-                            <input type="radio" id="female" name="gender">
+                            <input type="radio" id="female" name="gender" value="F">
                             <label for="female">Feminino</label>
                         </div>
 
                         <div class="gender-input">
-                            <input type="radio" id="male" name="gender">
+                            <input type="radio" id="male" name="gender" value="M">
                             <label for="male">Masculino</label>
                         </div>
 
                         <div class="gender-input">
-                            <input type="radio" id="others" name="gender">
+                            <input type="radio" id="others" name="gender" value="O">
                             <label for="others">Outros</label>
                         </div>
 
                         <div class="gender-input">
-                            <input type="radio" id="none" name="gender">
+                            <input type="radio" id="none" name="gender" value="PND">
                             <label for="none">Prefiro não dizer</label>
                         </div>
                     </div>
                 </div>
                 <div class="cadastrar-button">
-                    <button><a href="#">Cadastrar</a></button>
+                    <button><a href="{% url 'lista_usuarios' %}">Cadastrar</a></button>
                 </div>
             </form>
+        </div>
+        <div class="form-img">
+            <img src="{% static 'img/pessoas.svg' %}">
         </div>
     </div>
 </body>

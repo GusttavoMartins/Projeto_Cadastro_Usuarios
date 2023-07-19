@@ -1,0 +1,45 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style_lista.css' %}">
+    <title>tabela estilizada</title>
+</head>
+<body>
+    <div class="container">
+        <table class="content-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>CPF</th>
+                    <th>Data de Nascimento</th>
+                    <th>E-mail</th>
+                    <th>Telefone</th>
+                    <th>Gênero</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for usuario in usuarios %}
+                <tr>
+                    <td>{{ usuario.id_usuario}}</td>
+                    <td>{{ usuario.nome}}</td>
+                    <td>{{ usuario.cpf}}</td>
+                    <td>{{ usuario.data_nasc}}</td>
+                    <td>{{ usuario.email}}</td>
+                    <td>{{ usuario.telefone}}</td>
+                    <td>{{ usuario.genero}}</td>
+                 </tr>
+                 {% endfor %}
+            </tbody>
+            
+        </table>
+        <div class="back-button">
+            <button><a href="{% url 'home' %}"> voltar</a></button>
+        </div>
+    </div>
+</body>
+</html>
